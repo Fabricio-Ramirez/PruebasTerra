@@ -5,12 +5,12 @@ resource "aws_vpc" "VPC_OBG" {
   }
 }
 
-resource "aws_subnet" "viva_subnet" {
+resource "aws_subnet" "VPC_subnet" {
   vpc_id     = aws_vpc.VPC_OBG.id
   cidr_block = cidrsubnet(aws_vpc.VPC_OBG.cidr_block, 8, 0)
 
   tags = {
-    Name = "viva-subnet"
+    Name = "VPC_subnet"
   }
 }
 
@@ -44,7 +44,7 @@ output "vpc_id" {
 }
 
 output "subnet_id" {
-  value = aws_subnet.viva_subnet.id
+  value = aws_subnet.VPC_subnet.id
 }
 
 output "sg_id" {
