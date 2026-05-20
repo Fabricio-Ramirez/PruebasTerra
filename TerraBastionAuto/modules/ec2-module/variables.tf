@@ -16,6 +16,16 @@ variable "name_instance" {
     type = string
 }
 
+variable "subnet_id_input" {
+  description = "Subnet ID for the EC2 instance"
+  type        = string
+}
+
+variable "sg_id_input" {
+  description = "Security Group ID for the EC2 instance"
+  type        = string
+}
+
 output "dns" {
   value = aws_instance.module-instance-deploy.public_dns
 }

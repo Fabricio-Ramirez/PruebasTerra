@@ -3,6 +3,8 @@ resource "aws_instance" "module-instance-deploy" {
     key_name = var.key_name
     ami = var.ami
     iam_instance_profile = "LabInstanceProfile"
+    subnet_id = var.subnet_id_input
+    vpc_security_group_ids = [var.sg_id_input]
     user_data = <<-EOF
                 #!/bin/bash
                 yum install git -y
