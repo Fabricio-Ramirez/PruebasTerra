@@ -15,6 +15,12 @@ variable "subnet_cidr_2" {
   type        = string
 }
 
+variable "availability_zone_1" {
+  description = "The availability zone for the first new subnet."
+  type        = string
+}
+
+
 variable "availability_zone_2" {
   description = "The availability zone for the second new subnet."
   type        = string
