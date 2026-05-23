@@ -1,7 +1,7 @@
 
-variable "subnet_id" {
-  description = "The ID of the subnet for the load balancer."
-  type        = string
+variable "subnet_ids" {
+  description = "The IDs of the subnets for the load balancer."
+  type        = list(string)
 }
 
 variable "vpc_id" {

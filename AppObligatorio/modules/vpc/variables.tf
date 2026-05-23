@@ -10,7 +10,12 @@ variable "subnet_cidr" {
   type        = string
 }
 
-variable "availability_zone" {
-  description = "The availability zone for the new subnet."
+variable "subnet_cidr_2" {
+  description = "The CIDR block for the second new subnet."
+  type        = string
+}
+
+variable "availability_zone_2" {
+  description = "The availability zone for the second new subnet."
   type        = string
 }

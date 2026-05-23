@@ -2,7 +2,7 @@
 variable "ami_id" {
   description = "The AMI ID for the EC2 instances."
   type        = string
-  default     = "ami-0c55b159cbfafe1f0" # Amazon Linux 2 AMI
+  default     = "ami-0c5204531f799e0c6" # Amazon Linux 2 AMI for us-east-1
 }
 
 variable "instance_type" {
@@ -35,7 +35,7 @@ variable "min_size" {
   default     = 1
 }
 
-variable "subnet_id" {
-  description = "The ID of the subnet for the EC2 instances."
-  type        = string
+variable "subnet_ids" {
+  description = "The IDs of the subnets for the EC2 instances."
+  type        = list(string)
 }

@@ -1,6 +1,6 @@
 
-output "subnet_id" {
-  value = aws_subnet.new_subnet.id
+output "subnet_ids" {
+  value = [aws_subnet.new_subnet.id, aws_subnet.new_subnet_2.id]
 }
 
 output "vpc_id" {
